@@ -1,0 +1,262 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face { 
+    font-family: "Titan-One"; 
+    src: local("TitanOne"), url('../fonts/TitanOne-Regular.ttf'); 
+} 
+
+@font-face { 
+    font-family: "Signika-Regular"; 
+    src: local("SignikaRegular"), url('../fonts/Signika-Regular.ttf'); 
+} 
+
+@font-face { 
+    font-family: "Signika-Light"; 
+    src: local("SignikaLight"), url('../fonts/Signika-Regular.ttf'); 
+} 
+
+
+
+
+body {
+    background: url(../images/bg.jpg);
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 700px;
+    height: 640px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(5, 5, 5, .6);
+    text-align: center;
+    color: #fff;
+    display: block;
+    padding-top: 200px;
+}
+
+.nickWrapper {
+    display: none;
+}
+
+.info{
+    font-family: "Signika-Regular";
+    font-size: 15px;
+    word-spacing: 2px;
+}
+
+.nicknameInput:focus{
+    border: 1px solid #520f3b;
+    border-radius: 5px;
+    outline: none;
+}
+
+.nicknameInput{
+    height: 25px;
+    border: 0 solid white;
+    border-radius: 5px;
+    padding-left: 5px;
+    font-family: "Signika-Light"; 
+}
+
+.loginBtn{
+    border: 2px solid #520f3b;
+    border-radius: 5px;
+    font-size: 10px;
+    font-style: bold;
+    background: #ffffff;
+    color: #520f3b;
+    text-transform: uppercase;
+    width: 30px;
+    height: 27px;
+    text-align: center;
+    line-height: 10px;
+    font-family: "Signika-Regular";
+    transition: 1s ease;
+}
+
+.loginBtn:hover{
+    color: #ffffff;
+    background: #9a709e;
+}
+
+.banner {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner h1{
+    font-family: "Titan-One";
+    font-size: 60px;
+    text-align: center;
+    color: #801550;
+}
+
+.status{
+    font-family: "Signika-Regular";
+    color: #520f3b;
+    font-size: 15px;
+}
+
+
+.controls {
+    height: 100px;
+    margin: 5px 0px;
+    position: relative;
+}
+.historyMsg {
+    height: 400px;
+    width: 590px;
+    background-color: #fff;
+    overflow: auto;
+    padding: 2px;
+    border-radius: 10px;
+    font-family: "Signika-Light";
+}
+.historyMsg img {
+    max-width: 50%;
+    max-height: 20%;
+    margin: 0 auto;
+}
+.timespan {
+    color: #ddd;
+}
+.items {
+    height: 30px;
+}
+
+a{
+    text-decoration: none;   
+    font-family: "Signika-Regular";
+    color: #520f3b;
+    font-size: 15px;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+.colorStyle {
+    width: 50px;
+    height: 20px;
+    border: none;
+    padding: 0;
+}
+/*custom the file input*/
+
+.imageLable {
+    position: relative;
+}
+.sendImage {
+    position: absolute;
+    width: 50px;
+    left: 0;
+    top: 2px;
+    opacity: 0;
+    overflow: hidden;
+}
+/*end custom file input*/
+
+.messageInput {
+    width: 540px;
+    height: 90px;
+    resize: none;
+    border-radius: 5px;
+}
+
+.messageInput:focus{
+    outline: none;
+}
+.sendBtn {
+    width: 50px;
+    height: 90px;
+    border: 2px solid #520f3b;
+    border-radius: 10px;
+    font-size: 15px;
+    background: #e2e2e2;
+    color: #520f3b;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 15px;
+    font-family: "Signika-Regular";
+    transition: 0.7s ease;
+}
+
+.clearBtn, .emojiBtn, .imgBtn{
+    width: 50px;
+    height: 20px;
+    border: 2px solid #520f3b;
+    border-radius: 5px;
+    font-size: 10px;
+    background: #e2e2e2;
+    color: #520f3b;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 10px;
+    font-family: "Signika-Regular";
+    transition: 0.7s ease;
+}
+
+
+.sendBtn:hover, .clearBtn:hover, .imgBtn:hover, .emojiBtn:hover, .sendImage:hover{
+    color: #ffffff;
+    background: #9a709e;
+}
+
+.emojiWrapper {
+    display: none;
+    width: 500px;
+    bottom: 105px;
+    position: absolute;
+    background-color: #aaa;
+    box-shadow: 0 0 10px #555;
+}
+.emojiWrapper img {
+    margin: 2px;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+}
+.emojiWrapper img:hover {
+    background-color: blue;
+}
+.emoji{
+    display: inline;
+}
+
+.sending{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer a{
+    margin-left: 2px;
+}
+
+button:visited{
+    outline: none;
+}

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Chat</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="icon" href="icon.png">
+    </head>
+    <body>
+        <section class="wrapper">
+            <header>
+                <section class="banner">
+                    <h1>Chat</h1>
+                    <span class="status" id="status"></span>
+                </section>
+            </header>
+            <main>
+                <section class="historyMsg"id="historyMsg">
+                </section>
+                <section class="controls" >
+                    <section class="items">
+                        <input class="colorStyle" id="colorStyle" type="color" placeHolder='#A13687' value="#A13687" title="font color" />
+                        <input class="emojiBtn"  id="emoji" type="button" value="emoji" title="emoji" />
+                        <label for="sendImage" class="imageLable">
+                            <input class="imgBtn" type="button" value="image"  />
+                            <input class="sendImage" id="sendImage" type="file" value="image"/>
+                        </label>
+                        <input class="clearBtn" id="clearBtn" type="button" value="clear" title="clear screen" />
+                    </section>
+                    
+                    <section class="sending">
+                        <textarea class="messageInput" id="messageInput" placeHolder="Enter to send"></textarea>
+                        <input class="sendBtn" id="sendBtn" type="button" value="SEND">
+                    </section>
+                    
+                    <section class="emojiWrapper" id="emojiWrapper">
+                    </section>
+                </section>
+                
+        
+                <section id="loginWrapper" class="loginWrapper">
+                    <p class="info" id="info">Connecting to server...</p>
+                    <section id="nickWrapper" class="nickWrapper">
+                        <input type="text" placeHolder="nickname" id="nicknameInput" class="nicknameInput" />
+                        <input type="button" value="Go" id="loginBtn" class="loginBtn" />
+                    </section>
+                </section>
+            </main>
+
+            <footer>
+                <small><a href="https://github.com/CyrilVarikov" target ="_blank"><i class="fab fa-github"></i>GitHub</a> | <a href="mailto:cyril.varikov@gmail.com"><i class="fas fa-envelope"></i>Contact me</a></small>
+            </footer>
+        </section>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/chat.js"></script>
+    </body>
+</html>
